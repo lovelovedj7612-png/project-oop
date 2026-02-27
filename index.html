@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>โปรไฟล์นักเรียน</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Dark/Light Toggle -->
+<div class="theme-toggle-wrapper">
+    <label class="theme-switch">
+        <input type="checkbox" class="theme-switch__checkbox" id="themeToggle">
+        <div class="theme-switch__container">
+            <div class="theme-switch__clouds"></div>
+            <div class="theme-switch__stars-container">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 55" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M135.831 3.00688C135.055 3.85027 134.111 4.29946 133 4.35447C134.111 4.40947 135.055 4.85867 135.831 5.71123C136.607 6.55462 136.996 7.56303 136.996 8.72727C136.996 7.95722 137.172 7.25134 137.525 6.59129C137.886 5.93124 138.372 5.39954 138.98 5.00535C139.598 4.60199 140.268 4.39114 141 4.35447C139.88 4.2903 138.936 3.85027 138.16 3.00688C137.384 2.16348 136.996 1.16425 136.996 0C136.996 1.16425 136.607 2.16348 135.831 3.00688ZM31 23.3545C32.1114 23.2995 33.0551 22.8503 33.8313 22.0069C34.6075 21.1635 34.9956 20.1642 34.9956 19C34.9956 20.1642 35.3837 21.1635 36.1599 22.0069C36.9361 22.8503 37.8798 23.2903 39 23.3545C38.2679 23.3911 37.5976 23.602 36.9802 24.0053C36.3716 24.3995 35.8864 24.9312 35.5248 25.5913C35.172 26.2513 34.9956 26.9572 34.9956 27.7273C34.9956 26.563 34.6075 25.5546 33.8313 24.7112C33.0551 23.8587 32.1114 23.4095 31 23.3545ZM0 36.3545C1.11136 36.2995 2.05513 35.8503 2.83131 35.0069C3.6075 34.1635 3.99559 33.1642 3.99559 32C3.99559 33.1642 4.38368 34.1635 5.15987 35.0069C5.93605 35.8503 6.87982 36.2903 8 36.3545C7.26792 36.3911 6.59757 36.602 5.98015 37.0053C5.37155 37.3995 4.88644 37.9312 4.52481 38.5913C4.172 39.2513 3.99559 39.9572 3.99559 40.7273C3.99559 39.563 3.6075 38.5546 2.83131 37.7112C2.05513 36.8587 1.11136 36.4095 0 36.3545ZM56.8313 24.0069C56.0551 24.8503 55.1114 25.2995 54 25.3545C55.1114 25.4095 56.0551 25.8587 56.8313 26.7112C57.6075 27.5546 57.9956 28.563 57.9956 29.7273C57.9956 28.9572 58.172 28.2513 58.5248 27.5913C58.8864 26.9312 59.3716 26.3995 59.9802 26.0053C60.5976 25.602 61.2679 25.3911 62 25.3545C60.8798 25.2903 59.9361 24.8503 59.1599 24.0069C58.3837 23.1635 57.9956 22.1642 57.9956 21C57.9956 22.1642 57.6075 23.1635 56.8313 24.0069ZM81 25.3545C82.1114 25.2995 83.0551 24.8503 83.8313 24.0069C84.6075 23.1635 84.9956 22.1642 84.9956 21C84.9956 22.1642 85.3837 23.1635 86.1599 24.0069C86.9361 24.8503 87.8798 25.2903 89 25.3545C88.2679 25.3911 87.5976 25.602 86.9802 26.0053C86.3716 26.3995 85.8864 26.9312 85.5248 27.5913C85.172 28.2513 84.9956 28.9572 84.9956 29.7273C84.9956 28.563 84.6075 27.5546 83.8313 26.7112C83.0551 25.8587 82.1114 25.4095 81 25.3545ZM136 36.3545C137.111 36.2995 138.055 35.8503 138.831 35.0069C139.607 34.1635 139.996 33.1642 139.996 32C139.996 33.1642 140.384 34.1635 141.16 35.0069C141.936 35.8503 142.88 36.2903 144 36.3545C143.268 36.3911 142.598 36.602 141.98 37.0053C141.372 37.3995 140.886 37.9312 140.525 38.5913C140.172 39.2513 139.996 39.9572 139.996 40.7273C139.996 39.563 139.607 38.5546 138.831 37.7112C138.055 36.8587 137.111 36.4095 136 36.3545ZM101.831 49.0069C101.055 49.8503 100.111 50.2995 99 50.3545C100.111 50.4095 101.055 50.8587 101.831 51.7112C102.607 52.5546 102.996 53.563 102.996 54.7273C102.996 53.9572 103.172 53.2513 103.525 52.5913C103.886 51.9312 104.372 51.3995 104.98 51.0053C105.598 50.602 106.268 50.3911 107 50.3545C105.88 50.2903 104.936 49.8503 104.16 49.0069C103.384 48.1635 102.996 47.1642 102.996 46C102.996 47.1642 102.607 48.1635 101.831 49.0069Z" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="theme-switch__circle-container">
+                <div class="theme-switch__sun-moon-container">
+                    <div class="theme-switch__moon">
+                        <div class="theme-switch__spot"></div>
+                        <div class="theme-switch__spot"></div>
+                        <div class="theme-switch__spot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </label>
+</div>
+
+<!-- Title -->
+<div class="title-wrapper">
+    <button class="button" data-text="Awesome">
+        <span class="actual-text">&nbsp;โปรไฟล์นักเรียน&nbsp;</span>
+        <span aria-hidden="true" class="hover-text">&nbsp;โปรไฟล์นักเรียน&nbsp;</span>
+    </button>
+</div>
+
+<!-- Cards -->
+<div class="container" id="cardContainer"></div>
+
+<!-- Name Entry -->
+<div class="name-entry-banner">
+    <div class="name-entry-inner">
+        <span class="name-entry-label">&#128100; กรอกชื่อของคุณก่อนให้คะแนนและแสดงความคิดเห็น</span>
+        <div class="name-entry-row">
+            <input type="text" id="raterName" placeholder="พิมพ์ชื่อของคุณที่นี่..." class="rater-input-global" maxlength="30">
+            <button class="name-confirm-btn" onclick="confirmName()">ยืนยัน ✓</button>
+        </div>
+        <p class="name-confirmed-text" id="nameConfirmedText" style="display:none;"></p>
+    </div>
+</div>
+
+<!-- Rating & Feedback -->
+<div class="feedback-rating-container">
+    <div class="rating-section">
+        <h2 class="section-title">คุณภาพโปรไฟล์นักเรียน</h2>
+        <div class="rating-average">
+            <div class="avg-score" id="avgScore">0.0</div>
+            <div class="avg-stars" id="avgStars">☆☆☆☆☆</div>
+            <div class="avg-info">จาก <span id="totalRaters">0</span> คน</div>
+        </div>
+        <div class="rating-wrapper">
+            <div class="locked-overlay" id="ratingLock"><span>&#128274; กรอกชื่อด้านบนก่อนให้คะแนน</span></div>
+            <div class="rating">
+                <input type="radio" id="star-5" name="star-radio" value="5"><label for="star-5"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/></svg></label>
+                <input type="radio" id="star-4" name="star-radio" value="4"><label for="star-4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/></svg></label>
+                <input type="radio" id="star-3" name="star-radio" value="3"><label for="star-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/></svg></label>
+                <input type="radio" id="star-2" name="star-radio" value="2"><label for="star-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/></svg></label>
+                <input type="radio" id="star-1" name="star-radio" value="1"><label for="star-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/></svg></label>
+            </div>
+        </div>
+        <p class="rating-result">คะแนนของคุณ: <span id="rating-score">-</span> / 5 ดาว</p>
+        <div class="recent-raters-section">
+            <h3 class="recent-raters-title">&#11088; 5 คนล่าสุดที่ให้คะแนน</h3>
+            <div id="recentRatersList"><p class="no-raters">ยังไม่มีผู้ให้คะแนน</p></div>
+        </div>
+        <div class="reset-section">
+            <button class="reset-btn" onclick="resetAllData()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 .49-3.51"></path></svg>
+                รีเซ็ตข้อมูลทั้งหมด
+            </button>
+        </div>
+    </div>
+
+    <div class="feedback-section">
+        <h2 class="section-title">ส่งความคิดเห็น</h2>
+        <div class="feedback-input-wrapper">
+            <div class="locked-overlay" id="feedbackLock"><span>&#128274; กรอกชื่อด้านบนก่อนแสดงความคิดเห็น</span></div>
+            <textarea id="feedbackText" placeholder="พิมพ์ความคิดเห็นของคุณ..." class="feedback-textarea" disabled></textarea>
+        </div>
+        <div class="feedback-actions">
+            <button class="emoji-btn" onclick="addEmoji('&#128522;')"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 512 512"><path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm177.6 62.1C192.8 334.5 218.8 352 256 352s63.2-17.5 78.4-33.9c9-9.7 24.2-10.4 33.9-1.4s10.4 24.2 1.4 33.9c-22 23.8-60 49.4-113.6 49.4s-91.7-25.5-113.6-49.4c-9-9.7-8.4-24.9 1.4-33.9s24.9-8.4 33.9 1.4zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg></button>
+            <button class="emoji-btn" onclick="addEmoji('&#128546;')"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 512 512"><path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM174.6 384.1c-4.5 12.5-18.2 18.9-30.7 14.4s-18.9-18.2-14.4-30.7C146.9 319.4 198.9 288 256 288s109.1 31.4 126.6 79.9c4.5 12.5-2 26.2-14.4 30.7s-26.2-2-30.7-14.4C328.2 358.5 297.2 336 256 336s-72.2 22.5-81.4 48.1zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg></button>
+            <div class="feedback-spacer"></div>
+            <button class="send-btn" onclick="sendFeedback()"><svg fill="none" viewBox="0 0 24 24" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg"><path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M7.39999 6.32003L15.89 3.49003C19.7 2.22003 21.77 4.30003 20.51 8.11003L17.68 16.6C15.78 22.31 12.66 22.31 10.76 16.6L9.91999 14.08L7.39999 13.24C1.68999 11.34 1.68999 8.23003 7.39999 6.32003Z"/><path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M10.11 13.6501L13.69 10.0601"/></svg></button>
+        </div>
+        <div class="feedback-list">
+            <h3 class="feedback-list-title">ความคิดเห็นทั้งหมด (<span id="feedbackCount">0</span>)</h3>
+            <div id="feedbackItems"></div>
+        </div>
+    </div>
+</div>
+
+<!-- รูปใหญ่ Modal -->
+<div id="imgModal" class="img-modal" onclick="closeImgModal(event)">
+    <button class="img-modal-close" onclick="closeImgModalBtn()">&#10005;</button>
+    <img id="imgModalSrc" src="" alt="">
+</div>
+
+<script>
+// ==================== ข้อมูลนักเรียน ====================
+var students = [
+    {n:"ชื่อนักเรียน", id:"66202040001", major:"เทคโนโลยีธุรกิจดิจิทัล", cls:"ปวช.3/1", birth:"1 มกราคม 2008",    age:"17 ปี", email:"student1@email.com",  img:"student1.jpg"},
+    {n:"ชื่อนักเรียน", id:"66202040002", major:"เทคโนโลยีธุรกิจดิจิทัล", cls:"ปวช.3/1", birth:"2 กุมภาพันธ์ 2008", age:"17 ปี", email:"student2@email.com",  img:"student2.jpg"},
+    {n:"ชื่อนักเรียน", id:"66202040003", major:"เทคโนโลยีธุรกิจดิจิทัล", cls:"ปวช.3/1", birth:"3 มีนาคม 2008",    age:"17 ปี", email:"student3@email.com",  img:"student3.jpg"},
+    {n:"ชื่อนักเรียน", id:"66202040004", major:"เทคโนโลยีธุรกิจดิจิทัล", cls:"ปวช.3/1", birth:"4 เมษายน 2008",    age:"17 ปี", email:"student4@email.com",  img:"student4.jpg"},
+    {n:"ชื่อนักเรียน", id:"66202040005", major:"เทคโนโลยีธุรกิจดิจิทัล", cls:"ปวช.3/1", birth:"5 พฤษภาคม 2008",  age:"17 ปี", email:"student5@email.com",  img:"student5.jpg"},
+    {n:"ชื่อนักเรียน", id:"66202040006", major:"เทคโนโลยีธุรกิจดิจิทัล", cls:"ปวช.3/1", birth:"6 มิถุนายน 2008",  age:"17 ปี", email:"student6@email.com",  img:"student6.jpg"},
+    {n:"ชื่อนักเรียน", id:"66202040007", major:"เทคโนโลยีธุรกิจดิจิทัล", cls:"ปวช.3/1", birth:"7 กรกฎาคม 2008",  age:"17 ปี", email:"student7@email.com",  img:"student7.jpg"},
+    {n:"ชื่อนักเรียน", id:"66202040008", major:"เทคโนโลยีธุรกิจดิจิทัล", cls:"ปวช.3/1", birth:"8 สิงหาคม 2008",  age:"17 ปี", email:"student8@email.com",  img:"student8.jpg"},
+    {n:"ชื่อนักเรียน", id:"66202040009", major:"เทคโนโลยีธุรกิจดิจิทัล", cls:"ปวช.3/1", birth:"9 กันยายน 2008",  age:"17 ปี", email:"student9@email.com",  img:"student9.jpg"},
+    {n:"ชื่อนักเรียน", id:"66202040010", major:"เทคโนโลยีธุรกิจดิจิทัล", cls:"ปวช.3/1", birth:"10 ตุลาคม 2008",  age:"17 ปี", email:"student10@email.com", img:"student10.jpg"},
+    {n:"ชื่อนักเรียน", id:"66202040011", major:"เทคโนโลยีธุรกิจดิจิทัล", cls:"ปวช.3/1", birth:"11 พฤศจิกายน 2008",age:"17 ปี", email:"student11@email.com", img:"student11.jpg"},
+    {n:"ชื่อนักเรียน", id:"66202040012", major:"เทคโนโลยีธุรกิจดิจิทัล", cls:"ปวช.3/1", birth:"12 ธันวาคม 2008", age:"17 ปี", email:"student12@email.com", img:"student12.jpg"}
+];
+
+// ==================== สร้างการ์ด ====================
+(function buildCards() {
+    var container = document.getElementById('cardContainer');
+    students.forEach(function(s, i) {
+        var card = document.createElement('div');
+        card.className = 'card-parent';
+        card.innerHTML =
+            '<div class="card-3d">' +
+            '<div class="card-logo">' +
+            '<span class="card-circle c1"></span>' +
+            '<span class="card-circle c2"></span>' +
+            '<span class="card-circle c3"></span>' +
+            '<span class="card-circle c4"></span>' +
+            '<span class="card-circle c5">' +
+            '<div class="card-avatar">' +
+            '<img src="' + s.img + '" class="profile-img" onerror="this.style.display=\'none\'">' +
+            '<span class="avatar-placeholder">&#128100;</span>' +
+            '</div></span></div>' +
+            '<div class="card-glass"></div>' +
+            '<div class="card-content">' +
+            '<span class="card-name">' + s.n + '</span>' +
+            '<span class="card-id">&#127243; ' + s.id + '</span>' +
+            '<span class="card-info">&#128188; ' + s.major + '</span>' +
+            '<span class="card-info">&#128218; ' + s.cls + '</span>' +
+            '</div>' +
+            '<div class="card-bottom">' +
+            '<div class="card-detail-row"><span>&#127874; ' + s.birth + '</span><span>&#128290; ' + s.age + '</span></div>' +
+            '<div class="card-email">&#128140; ' + s.email + '</div>' +
+            '</div></div>';
+
+        // คลิกการ์ด → เปิดรูปใหญ่
+        card.addEventListener('click', function() {
+            openImgModal(s.img);
+            playHoverSound();
+        });
+
+        // hover → เสียง
+        card.addEventListener('mouseenter', function() {
+            playHoverSound();
+        });
+
+        container.appendChild(card);
+    });
+})();
+
+// ==================== รูปใหญ่ Modal ====================
+function openImgModal(src) {
+    var modal = document.getElementById('imgModal');
+    var img   = document.getElementById('imgModalSrc');
+    img.src = src;
+    img.onerror = function() { img.src = ''; img.alt = 'ไม่มีรูปภาพ'; };
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeImgModal(e) {
+    if (e.target === document.getElementById('imgModal')) {
+        document.getElementById('imgModal').style.display = 'none';
+        document.body.style.overflow = '';
+    }
+}
+
+function closeImgModalBtn() {
+    document.getElementById('imgModal').style.display = 'none';
+    document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        document.getElementById('imgModal').style.display = 'none';
+        document.body.style.overflow = '';
+    }
+});
+
+// ==================== เสียง (Web Audio API) ====================
+var audioCtx = null;
+function getAudioCtx() {
+    if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    return audioCtx;
+}
+
+function playHoverSound() {
+    try {
+        var ctx = getAudioCtx();
+        var osc = ctx.createOscillator();
+        var gain = ctx.createGain();
+        osc.connect(gain); gain.connect(ctx.destination);
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(660, ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(880, ctx.currentTime + 0.08);
+        gain.gain.setValueAtTime(0.06, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.15);
+        osc.start(ctx.currentTime);
+        osc.stop(ctx.currentTime + 0.15);
+    } catch(e) {}
+}
+
+// ==================== Dark/Light Mode ====================
+var themeToggle = document.getElementById('themeToggle');
+
+// โหลด theme ที่บันทึกไว้
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+    themeToggle.checked = true;
+} else {
+    document.body.classList.remove('dark-mode');
+    themeToggle.checked = false;
+}
+
+themeToggle.addEventListener('change', function() {
+    if (this.checked) {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+    }
+});
+
+// ==================== ชื่อผู้ใช้ ====================
+var currentUserName = sessionStorage.getItem('currentUserName') || '';
+
+function confirmName() {
+    var input = document.getElementById('raterName');
+    var name = input.value.trim();
+    if (!name) {
+        input.style.borderColor = '#ef4444';
+        input.style.animation = 'inputShake 0.4s ease';
+        setTimeout(function() { input.style.animation = ''; input.style.borderColor = ''; }, 500);
+        return;
+    }
+    currentUserName = name;
+    sessionStorage.setItem('currentUserName', name);
+    unlockAll();
+}
+
+document.getElementById('raterName').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') confirmName();
+});
+
+function unlockAll() {
+    var label = document.querySelector('.name-entry-label');
+    label.textContent = 'ยินดีต้อนรับ! สามารถให้คะแนนและแสดงความคิดเห็นได้เลย';
+    label.style.color = '#10b981';
+    document.querySelector('.name-entry-row').style.display = 'none';
+    var ct = document.getElementById('nameConfirmedText');
+    ct.style.display = 'block';
+    ct.innerHTML = '&#128100; <strong>' + escHtml(currentUserName) + '</strong> &nbsp;|&nbsp; <a href="#" onclick="changeName()" style="color:#4facfe;font-size:0.85em;">เปลี่ยนชื่อ</a>';
+    document.getElementById('ratingLock').style.display = 'none';
+    document.getElementById('feedbackLock').style.display = 'none';
+    document.getElementById('feedbackText').disabled = false;
+}
+
+function changeName() {
+    currentUserName = '';
+    sessionStorage.removeItem('currentUserName');
+    var label = document.querySelector('.name-entry-label');
+    label.textContent = 'กรอกชื่อของคุณก่อนให้คะแนนและแสดงความคิดเห็น';
+    label.style.color = '';
+    document.querySelector('.name-entry-row').style.display = 'flex';
+    document.getElementById('nameConfirmedText').style.display = 'none';
+    document.getElementById('raterName').value = '';
+    document.getElementById('ratingLock').style.display = 'flex';
+    document.getElementById('feedbackLock').style.display = 'flex';
+    document.getElementById('feedbackText').disabled = true;
+    document.getElementById('raterName').focus();
+}
+
+// ==================== Rating ====================
+var ratingInputs = document.querySelectorAll('.rating input[type="radio"]');
+var ratingScoreEl = document.getElementById('rating-score');
+
+ratingInputs.forEach(function(input) {
+    input.addEventListener('change', function() {
+        if (!currentUserName) return;
+        var score = parseInt(this.value);
+        ratingScoreEl.textContent = score;
+        var entry = { id: Date.now(), score: score, name: currentUserName, timestamp: new Date().toLocaleString('th-TH') };
+        var ratings = JSON.parse(localStorage.getItem('allRatings') || '[]');
+        ratings.push(entry);
+        localStorage.setItem('allRatings', JSON.stringify(ratings));
+        localStorage.setItem('myLastRating', score);
+        updateAvg(); loadRecentRaters();
+    });
+});
+
+function updateAvg() {
+    var ratings = JSON.parse(localStorage.getItem('allRatings') || '[]');
+    var avgEl = document.getElementById('avgScore');
+    var starsEl = document.getElementById('avgStars');
+    var totalEl = document.getElementById('totalRaters');
+    if (!ratings.length) { avgEl.textContent='0.0'; starsEl.innerHTML='☆☆☆☆☆'; totalEl.textContent='0'; return; }
+    var avg = ratings.reduce(function(a,r){ return a+r.score; },0) / ratings.length;
+    avgEl.textContent = avg.toFixed(1);
+    totalEl.textContent = ratings.length;
+    var full = Math.floor(avg), half = (avg-full)>=0.5, h='';
+    for(var i=0;i<full;i++) h+='⭐';
+    if(half&&full<5) h+='⭐';
+    for(var i=full+(half?1:0);i<5;i++) h+='☆';
+    starsEl.innerHTML = h;
+}
+
+function loadRecentRaters() {
+    var ratings = JSON.parse(localStorage.getItem('allRatings') || '[]');
+    var el = document.getElementById('recentRatersList');
+    if (!ratings.length) { el.innerHTML='<p class="no-raters">ยังไม่มีผู้ให้คะแนน</p>'; return; }
+    var medals = ['🥇','🥈','🥉','4️⃣','5️⃣'];
+    el.innerHTML = ratings.slice().reverse().slice(0,5).map(function(r,i){
+        return '<div class="rater-item"><span class="rater-rank">'+medals[i]+'</span><span class="rater-name">&#128100; '+escHtml(r.name)+'</span><span class="rater-stars">'+'⭐'.repeat(r.score)+'☆'.repeat(5-r.score)+'</span><span class="rater-time">'+r.timestamp+'</span></div>';
+    }).join('');
+}
+
+function resetAllData() {
+    if (!confirm('รีเซ็ตข้อมูลทั้งหมด?\n(คะแนน + ความคิดเห็นจะถูกลบ)')) return;
+    localStorage.removeItem('allRatings'); localStorage.removeItem('myLastRating'); localStorage.removeItem('feedbacks');
+    ratingScoreEl.textContent='-';
+    ratingInputs.forEach(function(i){ i.checked=false; });
+    updateAvg(); loadRecentRaters(); loadFeedbacks();
+    showMsg('รีเซ็ตเรียบร้อยแล้ว','#ef4444');
+}
+
+// ==================== Feedback ====================
+function addEmoji(e) {
+    var t = document.getElementById('feedbackText');
+    if (t.disabled) return;
+    t.value += e; t.focus();
+}
+
+function escHtml(text) {
+    var d = document.createElement('div');
+    d.appendChild(document.createTextNode(text));
+    return d.innerHTML;
+}
+
+function sendFeedback() {
+    if (!currentUserName) { alert('กรุณากรอกชื่อก่อน'); return; }
+    var t = document.getElementById('feedbackText'), text = t.value.trim();
+    if (!text) { alert('กรุณาพิมพ์ความคิดเห็น'); return; }
+    var fb = {id:Date.now(), text:text, name:currentUserName, timestamp:new Date().toLocaleString('th-TH')};
+    var fbs = JSON.parse(localStorage.getItem('feedbacks')||'[]');
+    fbs.unshift(fb);
+    localStorage.setItem('feedbacks', JSON.stringify(fbs));
+    t.value = ''; loadFeedbacks();
+    showMsg('ส่งความคิดเห็นสำเร็จ','#10b981');
+}
+
+function loadFeedbacks() {
+    var fbs = JSON.parse(localStorage.getItem('feedbacks')||'[]');
+    document.getElementById('feedbackCount').textContent = fbs.length;
+    var el = document.getElementById('feedbackItems');
+    if (!fbs.length) { el.innerHTML='<p class="no-feedback">ยังไม่มีความคิดเห็น</p>'; return; }
+    el.innerHTML = fbs.map(function(fb){
+        return '<div class="feedback-item"><div class="feedback-header"><span class="feedback-user">&#128100; '+escHtml(fb.name||'ผู้ใช้งาน')+'</span><span class="feedback-time">'+fb.timestamp+'</span></div><p class="feedback-text">'+escHtml(fb.text)+'</p><button class="delete-feedback-btn" onclick="delFeedback('+fb.id+')">ลบ</button></div>';
+    }).join('');
+}
+
+function delFeedback(id) {
+    if (!confirm('ลบความคิดเห็นนี้?')) return;
+    var fbs = JSON.parse(localStorage.getItem('feedbacks')||'[]').filter(function(f){ return f.id!==id; });
+    localStorage.setItem('feedbacks', JSON.stringify(fbs)); loadFeedbacks();
+}
+
+function showMsg(msg, color) {
+    var ex = document.querySelector('.success-message'); if(ex) ex.remove();
+    var el = document.createElement('div'); el.className='success-message'; el.textContent=msg; el.style.background=color;
+    document.body.appendChild(el);
+    setTimeout(function(){el.classList.add('show');},10);
+    setTimeout(function(){el.classList.remove('show');setTimeout(function(){el.remove();},300);},2500);
+}
+
+// ==================== Init ====================
+if (currentUserName) { document.getElementById('raterName').value=currentUserName; unlockAll(); }
+var lr = localStorage.getItem('myLastRating');
+if (lr) { ratingScoreEl.textContent=lr; var se=document.getElementById('star-'+lr); if(se) se.checked=true; }
+updateAvg(); loadRecentRaters(); loadFeedbacks();
+</script>
+</body>
+</html>
